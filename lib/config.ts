@@ -1,6 +1,6 @@
 export const API_CONFIG = {
-  BASE_URL: "http://localhost:5000/api",
-  UPLOADS_URL: "http://localhost:5000",
+  BASE_URL: "https://msaqa.washlinnk.com/api",
+  UPLOADS_URL: "https://msaqa.washlinnk.com",
 } as const
 
 export const api = {
