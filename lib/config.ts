@@ -1,6 +1,6 @@
 export const API_CONFIG = {
-  BASE_URL: "https://msaqa.washlinnk.com/api",
-  UPLOADS_URL: "https://msaqa.washlinnk.com",
+  BASE_URL: "http://mera.dubaivisionhub.com/api",
+  UPLOADS_URL: "https://mera.dubaivisionhub.com",
 } as const
 
 export const api = {

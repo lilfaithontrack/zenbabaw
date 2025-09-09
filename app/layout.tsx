@@ -5,9 +5,9 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Mesaqa Admin",
-  description: "Admin panel for Mesaqa restaurant management system",
-  generator: "Mesaqa Admin",
+  title: "zenbabaw Admin",
+  description: "Admin panel for zenbabaw  management system",
+  generator: "zenbabaw Admin",
 }
 
 export default function RootLayout({

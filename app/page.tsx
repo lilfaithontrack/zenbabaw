@@ -358,7 +358,7 @@ export default function AdminPanel() {
       case "confirmed":
         return <CheckCircle className="h-4 w-4 text-blue-500" />
       case "preparing":
-        return <AlertCircle className="h-4 w-4 text-orange-500" />
+        return <AlertCircle className="h-4 w-4 text-blue-500" />
       case "ready":
         return <CheckCircle className="h-4 w-4 text-green-500" />
       case "delivered":
@@ -377,7 +377,7 @@ export default function AdminPanel() {
       case "confirmed":
         return "bg-blue-100 text-blue-800 border-blue-200"
       case "preparing":
-        return "bg-orange-100 text-orange-800 border-orange-200"
+        return "bg-blue-100 text-blue-800 border-blue-200"
       case "ready":
         return "bg-green-100 text-green-800 border-green-200"
       case "delivered":
@@ -401,13 +401,13 @@ export default function AdminPanel() {
   const MobileNavigation = () => (
     <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="sm" className="md:hidden text-white hover:bg-orange-600">
+        <Button variant="ghost" size="sm" className="md:hidden text-white hover:bg-blue-600">
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-64 p-0">
-        <div className="bg-orange-500 p-4">
-          <h2 className="text-lg font-bold text-white">Mesaqa Admin</h2>
+        <div className="bg-blue-500 p-4">
+          <h2 className="text-lg font-bold text-white">KING TEDDY Admin</h2>
         </div>
         <ScrollArea className="h-full">
           <div className="p-4 space-y-2">
@@ -419,8 +419,8 @@ export default function AdminPanel() {
                   variant={activeTab === item.id ? "default" : "ghost"}
                   className={`w-full justify-start ${
                     activeTab === item.id
-                      ? "bg-orange-500 text-white hover:bg-orange-600"
-                      : "hover:bg-orange-50 hover:text-orange-600"
+                      ? "bg-blue-500 text-white hover:bg-blue-600"
+                      : "hover:bg-blue-50 hover:text-blue-600"
                   }`}
                   onClick={() => {
                     setActiveTab(item.id)
@@ -440,13 +440,13 @@ export default function AdminPanel() {
 
   if (!admin) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 p-4">
         <Card className="w-full max-w-md shadow-2xl">
           <CardHeader className="text-center space-y-4">
-            <div className="mx-auto w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center">
+            <div className="mx-auto w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
               <UtensilsCrossed className="h-8 w-8 text-white" />
             </div>
-            <CardTitle className="text-2xl text-orange-600">Mesaqa Admin</CardTitle>
+            <CardTitle className="text-2xl text-blue-600">Admin</CardTitle>
             <CardDescription>Enter your credentials to access the admin panel</CardDescription>
           </CardHeader>
           <CardContent>
@@ -474,7 +474,7 @@ export default function AdminPanel() {
               </div>
               <Button
                 type="submit"
-                className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white text-lg"
+                className="w-full h-12 bg-blue-500 hover:bg-blue-600 text-white text-lg"
                 disabled={loading}
               >
                 {loading ? "Logging in..." : "Login"}
@@ -490,35 +490,35 @@ export default function AdminPanel() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Mobile Header */}
-      <header className="bg-orange-500 shadow-sm border-b md:hidden">
+      <header className="bg-blue-500 shadow-sm border-b md:hidden">
         <div className="flex justify-between items-center p-4">
           <div className="flex items-center gap-3">
             <MobileNavigation />
-            <h1 className="text-lg font-bold text-white">Mesaqa Admin</h1>
+            <h1 className="text-lg font-bold text-white">KING TEDDY Admin</h1>
           </div>
-          <Button variant="ghost" size="sm" onClick={logout} className="text-white hover:bg-orange-600">
+          <Button variant="ghost" size="sm" onClick={logout} className="text-white hover:bg-blue-600">
             <LogOut className="w-4 h-4" />
           </Button>
         </div>
       </header>
 
       {/* Desktop Header */}
-      <header className="bg-orange-500 shadow-sm border-b hidden md:block">
+      <header className="bg-blue-500 shadow-sm border-b hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <UtensilsCrossed className="h-5 w-5 text-orange-500" />
+                <UtensilsCrossed className="h-5 w-5 text-blue-500" />
               </div>
-              <h1 className="text-2xl font-bold text-white">Mesaqa Admin</h1>
+              <h1 className="text-2xl font-bold text-white"> Admin</h1>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-orange-100">Welcome, {admin.username}</span>
+              <span className="text-sm text-blue-100">Welcome, {admin.username}</span>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={logout}
-                className="border-orange-200 text-orange-100 hover:bg-orange-400 hover:text-white bg-transparent"
+                className="border-blue-200 text-blue-100 hover:bg-blue-400 hover:text-white bg-transparent"
               >
                 <LogOut className="w-4 h-4 mr-2" />
                 Logout
@@ -531,14 +531,14 @@ export default function AdminPanel() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           {/* Desktop Navigation */}
-          <TabsList className="hidden md:grid w-full grid-cols-6 bg-orange-50 h-12">
+          <TabsList className="hidden md:grid w-full grid-cols-6 bg-blue-50 h-12">
             {navigationItems.map((item) => {
               const Icon = item.icon
               return (
                 <TabsTrigger
                   key={item.id}
                   value={item.id}
-                  className="data-[state=active]:bg-orange-500 data-[state=active]:text-white flex items-center gap-2"
+                  className="data-[state=active]:bg-blue-500 data-[state=active]:text-white flex items-center gap-2"
                 >
                   <Icon className="h-4 w-4" />
                   <span className="hidden lg:inline">{item.label}</span>
@@ -555,7 +555,7 @@ export default function AdminPanel() {
                     <p className="text-sm font-medium text-muted-foreground">Users</p>
                     <p className="text-2xl font-bold">{users.length}</p>
                   </div>
-                  <Users className="h-8 w-8 text-orange-500" />
+                  <Users className="h-8 w-8 text-blue-500" />
                 </div>
               </Card>
               <Card className="p-4 md:p-6">
@@ -564,7 +564,7 @@ export default function AdminPanel() {
                     <p className="text-sm font-medium text-muted-foreground">Menu</p>
                     <p className="text-2xl font-bold">{menuItems.length}</p>
                   </div>
-                  <Package className="h-8 w-8 text-orange-500" />
+                  <Package className="h-8 w-8 text-blue-500" />
                 </div>
               </Card>
               <Card className="p-4 md:p-6">
@@ -573,7 +573,7 @@ export default function AdminPanel() {
                     <p className="text-sm font-medium text-muted-foreground">Orders</p>
                     <p className="text-2xl font-bold">{orders.length}</p>
                   </div>
-                  <ShoppingBag className="h-8 w-8 text-orange-500" />
+                  <ShoppingBag className="h-8 w-8 text-blue-500" />
                 </div>
               </Card>
               <Card className="p-4 md:p-6">
@@ -582,7 +582,7 @@ export default function AdminPanel() {
                     <p className="text-sm font-medium text-muted-foreground">Categories</p>
                     <p className="text-2xl font-bold">{categories.length}</p>
                   </div>
-                  <BarChart3 className="h-8 w-8 text-orange-500" />
+                  <BarChart3 className="h-8 w-8 text-blue-500" />
                 </div>
               </Card>
             </div>
@@ -590,7 +590,7 @@ export default function AdminPanel() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-orange-500" />
+                  <Clock className="h-5 w-5 text-blue-500" />
                   Recent Orders
                 </CardTitle>
               </CardHeader>
@@ -625,7 +625,7 @@ export default function AdminPanel() {
 
           <TabsContent value="categories" className="space-y-6">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <h2 className="text-2xl font-bold text-orange-600">Categories</h2>
+              <h2 className="text-2xl font-bold text-blue-600">Categories</h2>
               <Dialog open={categoryDialog} onOpenChange={setCategoryDialog}>
                 <DialogTrigger asChild>
                   <Button
@@ -633,7 +633,7 @@ export default function AdminPanel() {
                       setEditingItem(null)
                       setCategoryForm({ name: "", description: "" })
                     }}
-                    className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto"
+                    className="bg-blue-500 hover:bg-blue-600 text-white w-full sm:w-auto"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Add Category
@@ -664,7 +664,7 @@ export default function AdminPanel() {
                   <DialogFooter>
                     <Button
                       onClick={editingItem ? updateCategory : createCategory}
-                      className="bg-orange-500 hover:bg-orange-600 text-white w-full"
+                      className="bg-blue-500 hover:bg-blue-600 text-white w-full"
                     >
                       {editingItem ? "Update" : "Create"}
                     </Button>
@@ -703,7 +703,7 @@ export default function AdminPanel() {
 
           <TabsContent value="menu" className="space-y-6">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <h2 className="text-2xl font-bold text-orange-600">Menu Items</h2>
+              <h2 className="text-2xl font-bold text-blue-600">Menu Items</h2>
               <Dialog open={menuDialog} onOpenChange={setMenuDialog}>
                 <DialogTrigger asChild>
                   <Button
@@ -711,7 +711,7 @@ export default function AdminPanel() {
                       setEditingItem(null)
                       setMenuForm({ name: "", description: "", price: 0, category: "", image: "", available: true })
                     }}
-                    className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto"
+                    className="bg-blue-500 hover:bg-blue-600 text-white w-full sm:w-auto"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Add Menu Item
@@ -790,7 +790,7 @@ export default function AdminPanel() {
                   <DialogFooter>
                     <Button
                       onClick={editingItem ? updateMenuItem : createMenuItem}
-                      className="bg-orange-500 hover:bg-orange-600 text-white w-full"
+                      className="bg-blue-500 hover:bg-blue-600 text-white w-full"
                     >
                       {editingItem ? "Update" : "Create"}
                     </Button>
@@ -823,7 +823,7 @@ export default function AdminPanel() {
                       {item.description || "No description"}
                     </p>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-bold text-orange-600">${item.price}</span>
+                      <span className="text-lg font-bold text-blue-600">${item.price}</span>
                       <div className="flex gap-2">
                         <Button
                           variant="outline"
@@ -855,7 +855,7 @@ export default function AdminPanel() {
           </TabsContent>
 
           <TabsContent value="orders" className="space-y-6">
-            <h2 className="text-2xl font-bold text-orange-600">Orders</h2>
+            <h2 className="text-2xl font-bold text-blue-600">Orders</h2>
             <div className="space-y-4">
               {orders.map((order) => (
                 <Card key={order._id} className="p-4">
@@ -921,13 +921,13 @@ export default function AdminPanel() {
           </TabsContent>
 
           <TabsContent value="users" className="space-y-6">
-            <h2 className="text-2xl font-bold text-orange-600">Users</h2>
+            <h2 className="text-2xl font-bold text-blue-600">Users</h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {users.map((user) => (
                 <Card key={user._id} className="p-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                      <Users className="h-6 w-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <Users className="h-6 w-6 text-blue-600" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold truncate">{user.name || "Anonymous User"}</h3>
@@ -948,14 +948,14 @@ export default function AdminPanel() {
 
           <TabsContent value="payments" className="space-y-6">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <h2 className="text-2xl font-bold text-orange-600">Payment Methods</h2>
+              <h2 className="text-2xl font-bold text-blue-600">Payment Methods</h2>
               <Dialog open={paymentDialog} onOpenChange={setPaymentDialog}>
                 <DialogTrigger asChild>
                   <Button
                     onClick={() => {
                       setPaymentForm({ bankName: "", accountNumber: "" })
                     }}
-                    className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto"
+                    className="bg-blue-500 hover:bg-blue-600 text-white w-full sm:w-auto"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Add Payment Method
@@ -986,7 +986,7 @@ export default function AdminPanel() {
                   <DialogFooter>
                     <Button
                       onClick={createPaymentMethod}
-                      className="bg-orange-500 hover:bg-orange-600 text-white w-full"
+                      className="bg-blue-500 hover:bg-blue-600 text-white w-full"
                     >
                       Create
                     </Button>
@@ -1000,8 +1000,8 @@ export default function AdminPanel() {
                 <Card key={method._id} className="p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                        <CreditCard className="h-6 w-6 text-orange-600" />
+                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <CreditCard className="h-6 w-6 text-blue-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold">{method.bankName}</h3>
