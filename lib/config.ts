@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-  BASE_URL: "http://mera.dubaivisionhub.com/api",
+  BASE_URL: "https://mera.dubaivisionhub.com/api",
   UPLOADS_URL: "https://mera.dubaivisionhub.com",
 } as const
 
